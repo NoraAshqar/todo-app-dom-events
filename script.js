@@ -20,14 +20,14 @@ function addTask(){
 
            tasksList.append(task); 
            newTask.value="";
-         } 
-        } 
+    } 
+} 
 addButton.addEventListener('click',addTask)
 newTask.addEventListener('keypress',function(e){
-     if(e.key=='Enter'){ addTask() 
-
+     if(e.key=='Enter'){ 
+        addTask() 
      } 
-    })
+ })
 
 tasksList.addEventListener('click',function(e){
    
