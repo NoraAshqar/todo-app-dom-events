@@ -17,7 +17,7 @@ function addTask(){
            deleteButton.textContent= 'delete';
            deleteButton.className= 'deleteBtn';
            task.append(deleteButton);
-           
+
            tasksList.append(task); 
            newTask.value="";
          } 
@@ -28,3 +28,15 @@ newTask.addEventListener('keypress',function(e){
 
      } 
     })
+
+tasksList.addEventListener('click',function(e){
+   
+    if(e.target.classList.contains('done'))
+    {
+        e.target.parentElement.classList.toggle('complete')
+    }
+    if(e.target.classList.contains('deleteBtn'))
+    {
+        e.target.parentElement.remove();
+    }
+})    
